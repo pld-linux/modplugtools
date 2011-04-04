@@ -1,12 +1,12 @@
 Summary:	Audio player for libmodplug
 Summary(pl.UTF-8):	Odtwarzacz muzyki dla libmodplug
 Name:		modplugtools
-Version:	0.5.2
+Version:	0.5.3
 Release:	1
 License:	GPL v3
 Group:		Applications/Sound
 Source0:	http://downloads.sourceforge.net/modplug-xmms/%{name}-%{version}.tar.gz
-# Source0-md5:	9d89a1e15f92133897bf073cf8380a88
+# Source0-md5:	502b9a11e41219ceb7f2322d7521e2b3
 URL:		http://modplug-xmms.sourceforge.net/
 BuildRequires:	libao-devel >= 0.8.0
 BuildRequires:	libmodplug-devel >= 0.8.8
@@ -31,7 +31,8 @@ Odtwarzacze muzyki dla libmodplug (uruchamiane z linii poleceń):
 %setup -q
 
 %build
-%configure
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
